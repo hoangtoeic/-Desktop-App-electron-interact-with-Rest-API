@@ -248,3 +248,28 @@
     display: none;
   }
 }
+
+.mainHomeTitle{
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#mainHomes{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.mainHome{
+  width: 30%;
+  box-shadow: 0 0 10px 10px pink;
+  text-align: center;
+  padding: 1.5em;
+  margin-bottom: 2em;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
