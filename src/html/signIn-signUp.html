@@ -18,11 +18,11 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input id="emailLogin" type="text" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input id="passLogin" type="password" placeholder="Password" />
             </div>
             <p id="msgSignIn"></p>
             <input type="submit" id="submited" value="Login" class="btn solid" />
@@ -46,15 +46,19 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input id="nameSignUp" type="text" placeholder="Firstname" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-birthday-cake"></i>
+              <input id="ageSignUp" type="text" placeholder="age" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input id="emailSignUp" type="email" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input id="passwordSignUp" type="password" placeholder="Password" />
             </div>
             <p id="msgSignUp"></p>
             <input type="submit" id="signuped" class="btn" value="Sign up" />
@@ -82,7 +86,7 @@
           <div class="content">
             <h3>New here ?</h3>
             <p>
-            Why don't you discover Task managerment desktop app 
+            Why don't you discover Task management desktop app 
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up

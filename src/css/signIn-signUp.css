@@ -90,6 +90,11 @@ form.sign-in-form {
 #msgSignIn{
   color:rgb(252, 4, 4)
 }
+#msgSignUp{
+  color: red
+}
+
+
 .input-field input {
   background: none;
   outline: none;

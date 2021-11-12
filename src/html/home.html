@@ -92,8 +92,13 @@
      </li>
     </ul>
   </div>
-  <section class="home-section">
+  <section style="background-image: url('../image/background.jpg');" class="home-section">
     <h1 class="mainHomeTitle">List Task</h1>
+    <div class="btnCLass"> 
+      <button class="btnCreatedTask" id="created-btn">
+      Create Task
+     </button></div>
+   
     <div class="grid-container">
        <div id="mainHomes">
      
@@ -110,6 +115,12 @@
     console.log( id)
     window.location="./itemPage.html?id="+id
 });
+$("body").on('click','#created-btn', function() {
+  var url = new URL(window.location.href);
+  var id = url.searchParams.get("id");
+  window.location="./itemPage.html?id="+id
+});
+
 </script>  
 </body>
 
