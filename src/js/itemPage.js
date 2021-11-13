@@ -11,7 +11,12 @@ const descriptionTask=document.getElementById("descriptionTask")
 const commentTask=document.getElementById("commentTask")
 const msg=document.getElementById('msg')
 
-
+///////////////////////////////////////********BACK TASK********////////
+backTask.addEventListener("click",function(){
+  var id = url.searchParams.get("id");
+  window.location="./home.html?id="+id
+})
+///////////////////////////////////////********BACK TASK********////////
 createTask.addEventListener("click",()=>{
  
   var commentTaskStr=commentTask.value

@@ -82,6 +82,15 @@ form {
 .title {
   color: #fff;
   font-weight: 500;
+  font-size: 2rem;
+  line-height: 2;
+  margin-bottom: 0.7rem;
+}
+
+
+.title2 {
+  color: #fff;
+  font-weight: 400;
   font-size: 1.5rem;
   line-height: 1;
   margin-bottom: 0.7rem;

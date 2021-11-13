@@ -255,8 +255,8 @@
  
 }
 .btnCreatedTask{
-  background-color: rgb(171, 233, 233);
-
+  background-color: rgb(69, 128, 128);
+  color:rgb(246, 248, 248);
   margin: 0;
   border: 2px solid #ddece3;
   width: 280px;
@@ -274,6 +274,7 @@
   font-size: 3rem;
   margin-bottom: 1.5rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:rgb(246, 248, 248)
 }
 
 
@@ -284,7 +285,7 @@
 }
 .mainHome{
   width: 30%;
-  box-shadow: 0 0 10px 10px rgb(246, 248, 248);
+  box-shadow: 0 0 0px 10px rgb(246, 248, 248);
   text-align: center;
   padding: 1.5em;
   margin-bottom: 2em;

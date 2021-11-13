@@ -1,8 +1,18 @@
 const inputs = document.querySelectorAll(".input");
-let inputName=document.querySelector('#id01')
-var url = new URL(window.location.href);
+let inputName=document.querySelector('#id01');
+const createTask=document.getElementById("createTask")
+const finishedList=document.getElementById("finishedList")
+const backTask=document.getElementById("backTask")
+var multiselect = document.getElementById("mySelectLabel");
+const multiselectOption = multiselect.getElementsByTagName('option')[0];
+//const updateTask=document.getElementById("updateTask")
 
-// var id = url.searchParams.get("id");
+const titleTask=document.getElementById("titleTask")
+const descriptionTask=document.getElementById("descriptionTask")
+const commentTask=document.getElementById("commentTask")
+const msg=document.getElementById('msg')
+var url = new URL(window.location.href);
+ var idTask = url.searchParams.get("idTask");
 
 // console.log(id)
 
@@ -14,6 +24,7 @@ var url = new URL(window.location.href);
 // console.log(myAssign)
 
 // inputName.value=id
+
 
 
 function focusFunc() {
