@@ -5,19 +5,36 @@ window.onload = (event) => {
   eventHandle();
 };
 async function init(){
+  var url = new URL(window.location.href);
+  var id = url.searchParams.get("id");
+  var emailUser;
+  
+  await fetch('http://localhost:3000/users/'+id,).then(response=>{ return response.json()})
+  .then((data)=>{
+    
+    emailUser=data.email
+    console.log(emailUser)
+  })
+
+
+
   await fetch('http://localhost:3000/tasks',).then(response=>{ return response.json()})
 .then((data)=>{let dataShow="";
     data.map((values)=>{
-        dataShow+=` <div class="mainHome" id=${values._id}>
-        <h3 class="title">${values.title}</h1>
-        <p class="number user" id=${values._id+"number"}>people </p>
-        <p class="completed">completed: ${values.completed}</p>
-      </div>`
+    //  if(values.)
+    findUser=values.assignedUser.split(",")
+    if(findUser.includes(emailUser)){
+      dataShow+=` <div class="mainHome" id=${values._id}>
+      <h3 class="title">${values.title}</h1>
+      <p class="number user" id=${values._id+"number"}>people </p>
+      <p class="completed">completed: ${values.completed}</p>
+    </div>`
+    }
+      
     });
     document.getElementById("mainHomes").innerHTML=dataShow
     colorNumberFunc(data);
     })
-
 }
 
 function colorNumberFunc(data)

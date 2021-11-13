@@ -24,7 +24,7 @@ createTask.addEventListener("click",()=>{
   var optionStr=multiselectOption.value
 var dropdownValue = "Nothing is selected";
 if(optionStr.includes(dropdownValue)){
-  msg.innerHTML='Anyone who assigned for ?'
+  msg.innerHTML='who is assigned the task??'
 }
 else if (!titleTask.value)
 {
