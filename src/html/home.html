@@ -111,9 +111,11 @@
  </script>
 <script>
   $("body").on('click','.mainHome', function() {
-    var id=$(this).attr('id')
-    console.log( id)
-    window.location="./itemPage.html?id="+id
+    var url = new URL(window.location.href);
+  var id = url.searchParams.get("id");
+    var idTask=$(this).attr('id')
+  
+    window.location="./taskUpdate.html?id="+id+"&idTask="+idTask
 });
 $("body").on('click','#created-btn', function() {
   var url = new URL(window.location.href);

@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Form</title>
     <link rel="stylesheet" href="../css/styleItemPage.css" />
-   
+    
+    <script src="../js/chatbox-select.js"></script>
+
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
@@ -17,26 +19,32 @@
       <img src="../image/shape.png" class="square" alt="" />
       <div class="form">
         <div class="contact-info">
-          <h3 class="title">Let's get in touch</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            dolorum adipisci recusandae praesentium dicta!
-          </p>
-
-          <div class="info">
-            <div class="information">
-              <img src="../image/location.png" class="icon" alt="" />
-              <p>92 Cherry Drive Uniondale, NY 11553</p>
-            </div>
-            <div class="information">
-              <img src="../image/email.png" class="icon" alt="" />
-              <p>lorem@ipsum.com</p>
-            </div>
-            <div class="information">
-              <img src="../image/phone.png" class="icon" alt="" />
-              <p>123-456-789</p>
+          <h3 class="title">Assign For</h3>
+          <div class="container-fluid">
+            <div class="form-group col-sm-8">
+              <label for="myMultiselect"></label>
+              <div id="myMultiselect" class="multiselect">
+                <div id="mySelectLabel" class="selectBox" onclick="toggleCheckboxArea()">
+                  <select class="form-select">
+                    <option>somevalue</option>
+                  </select>
+                  <div class="overSelect"></div>
+                </div>
+                <div id="mySelectOptions">
+        
+                </div>
+              </div>
             </div>
           </div>
+          <br>
+          <h3 class="title">Finish Task?</h3>
+          <div class="finishedListClass">
+            <select id="finishedList">
+              <option value="1">true</option>
+              <option value="2" selected="selected">false</option></select>
+            
+          </div>
+       
 
           <div class="social-media">
             <p>Connect with us :</p>
@@ -64,30 +72,37 @@
           <span class="circle two"></span>
 
           <form action="index.html" autocomplete="off">
-            <h3 class="title">Contact us</h3>
+            <h3 class="title">Create Task</h3>
+           
             <div class="input-container">
-              <h3 class="title">ID</h3>
-              <input type="text" name="name" id="id01" class="input" />
-              <label for=""></label>
-              <span>id</span>
+              <input id="titleTask" type="email" name="email" class="input" />
+              <label for="">Title</label>
+              <span>Title</span>
             </div>
-            <div class="input-container">
-              <input type="email" name="email" class="input" />
-              <label for="">Email</label>
-              <span>Email</span>
-            </div>
-            <div class="input-container">
-              <input type="tel" name="phone" class="input" />
-              <label for="">Completed</label>
-              <span>Phone</span>
+            
+            <div class="input-container textarea">
+              <textarea id="descriptionTask" name="message" class="input"></textarea>
+              <label for="">Description or require</label>
+              <span>Description or require</span>
             </div>
             <div class="input-container textarea">
-              <textarea name="message" class="input"></textarea>
-              <label for="">Description</label>
-              <span>Message</span>
+              <textarea id="commentTask" name="message" class="input"></textarea>
+              <label for="">Comment </label>
+              <span>Comment </span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+           
+            
+            
+
+            <p id="msg"></p>
+
           </form>
+          <div class="btn-group">
+            <button id="createTask">Create</button>
+           
+            <button id="backTask">Back</button>
+          </div>
+          <br>
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ function createWindow () {
   })
 
   // and load the index.html of the app.
-  win.loadFile('src/html/home.html')
+  win.loadFile('src/html/signIn-signUp.html')
 
   // Open the DevTools.
   win.webContents.openDevTools()
