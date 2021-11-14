@@ -19,8 +19,8 @@ async function init(){
 
 
   await fetch('http://localhost:3000/tasks',).then(response=>{ return response.json()})
-.then((data)=>{let dataShow="";
-    data.map((values)=>{
+.then(async (data)=>{let dataShow="";
+    await data.map((values)=>{
     //  if(values.)
     findUser=values.assignedUser.split(",")
     if(findUser.includes(emailUser)){
@@ -30,9 +30,10 @@ async function init(){
       <p class="completed">completed: ${values.completed}</p>
     </div>`
     }
+    document.getElementById("mainHomes").innerHTML=dataShow
       
     });
-    document.getElementById("mainHomes").innerHTML=dataShow
+   
     colorNumberFunc(data);
     })
 }
@@ -41,9 +42,10 @@ function colorNumberFunc(data)
 {
   data.map((values)=>{
     var divID=document.getElementById(values._id)
-    if(values.completed)  
-    divID.setAttribute('style', 'background-color: #41de58');
+   
     try {
+      if(values.completed)  
+      divID.setAttribute('style', 'background-color: #41de58');
       var number=values.assignedUser.split(",").length;
       var numberID=document.getElementById(values._id+"number")
   
